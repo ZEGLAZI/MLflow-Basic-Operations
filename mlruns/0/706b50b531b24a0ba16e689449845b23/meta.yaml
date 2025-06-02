@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/zeglazi/Documents/ETE_ChestCancer_MLproject/mlruns/0/706b50b531b24a0ba16e689449845b23/artifacts
+end_time: 1748897996771
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 706b50b531b24a0ba16e689449845b23
+run_name: clean-shoat-315
+run_uuid: 706b50b531b24a0ba16e689449845b23
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748897994040
+status: 3
+tags: []
+user_id: zeglazi

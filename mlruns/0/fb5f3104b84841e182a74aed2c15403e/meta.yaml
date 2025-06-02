@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/zeglazi/Documents/ETE_ChestCancer_MLproject/mlruns/0/fb5f3104b84841e182a74aed2c15403e/artifacts
+end_time: 1748897713266
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fb5f3104b84841e182a74aed2c15403e
+run_name: overjoyed-mouse-566
+run_uuid: fb5f3104b84841e182a74aed2c15403e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748897709376
+status: 3
+tags: []
+user_id: zeglazi
