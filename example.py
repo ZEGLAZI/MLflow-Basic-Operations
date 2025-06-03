@@ -12,6 +12,11 @@ import mlflow
 from mlflow.models.signature import infer_signature
 import mlflow.sklearn
 
+import dagshub
+
+dagshub.init(repo_owner='ZEGLAZI', repo_name='MLflow-Basic-Operations', mlflow=True)
+
+
 import logging
 
 logging.basicConfig(level=logging.WARN)
@@ -69,10 +74,11 @@ if __name__ == "__main__":
         mlflow.log_metric("r2", r2)
         mlflow.log_metric("mae", mae)
         
+        # For remote server only (Dagshub)
+        remote_server_uri = "https://dagshub.com/ZEGLAZI/MLflow-Basic-Operations"
+        mlflow.set_tracking_uri(remote_server_uri)
         
-        predictions = lr.predict(train_x)
-        signature = infer_signature(train_x, predictions)
-        
+    
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
         
@@ -82,10 +88,9 @@ if __name__ == "__main__":
             # There are other ways to use the model Registry, which depends on the use case,
             # Please refere to the doc for more informations
             mlflow.sklearn.log_model(
-                lr, "model", registreted_model_name ="ElesticnetWineModel", signature = signature
-            )
+                lr, "model", registered_model_name ="ElesticnetWineModel")
         else:
-            mlflow.sklearn.log_model(lr, "model", signature = signature)
+            mlflow.sklearn.log_model(lr, "model")
             
              
         
